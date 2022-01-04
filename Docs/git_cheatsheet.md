@@ -46,13 +46,18 @@ Merging
 	git push
 
 Pulling
-
+	git fetch --all
+	git pull
 
 Pushing
-Adding remote origin
+	git push
+Adding remote origin branch
+	git push -u origin <branch_name>
 
-
-Chery-pick
-
+Cherry-pick
+	git cherry-pick <commit_ID>
 
 Stash
+	git stash
+	git stash pop
+	git stash apply
