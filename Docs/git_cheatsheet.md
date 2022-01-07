@@ -13,12 +13,12 @@
 
 ## Staging files
 * All files
-> git add --all
-> git add .
+`git add --all`
+`git add .`
 * Certain files
-> git add <file_path>
+`git add <file_path>`
 * Unstaging files
-> git reset -- <file_path>
+`git reset -- <file_path>`
 
 ## Reseting files to HEAD. Removes changes after HEAD
 	git checkout @ -- <file_path> # Shortcut for HEAD.
@@ -37,47 +37,47 @@
 ## Merging
 1. We have commited changes in <branch_name>.
 2. We go to branch master.
-> git checkout master
+`git checkout master`
 3. Updates commits graph from origin.
-> git fetch --all
+`git fetch --all`
 4. We get all remote changes in master branch.
-> git pull
+`git pull`
 5. We go to current branch.
-> git checkout <branch_name>
+`git checkout <branch_name>`
 6. Merge branch master into branch <branch_name>.
-> git merge master
+`git merge master`
 7. We upload the new branch version to GitHub or GitLab etc.
-> git push
+`git push`
 8. 2.)
-> git checkout master
+`git checkout master`
 9. Because we merged master into <branch_name>, we make fast forward now.
-> git merge <branch_name>
+`git merge <branch_name>`
 10. 7.) but we upload master branch.
-> git push
+`git push`
 
 ## Pulling
 * Updates commits graph from origin.
-> git fetch --all
+`git fetch --all`
 * We get all remote changes in current branch.
-> git pull
+`git pull`
 
 ## Pushing
 ### Uploads all new commits for current branch.
 * Adding remote origin branch and uploads current branch commits.
-> git push -u origin <branch_name>
+`git push -u origin <branch_name>`
 * Only upload.
-> git push
+`git push`
 
 ## Cherry-pick
 * Translates a commit from one branch to another.
-> git cherry-pick <commit_ID>
+`git cherry-pick <commit_ID>`
 
 ## Stash. 
 * Saves current not commited changes into a buffer.
-> git stash
+`git stash`
 * Loads all stash changes into the current branch and deletes the changes from the buffer.
-> git stash pop
+`git stash pop`
 * Loads all stash changes into the current branch. Keeps the changes in the buffer.
-> git stash apply
+`git stash apply`
 * List of all stash changes.
-> git stash list
+`git stash list`
