@@ -72,7 +72,7 @@
 * Translates a commit from one branch to another.
 `git cherry-pick <commit_ID>`
 
-## Stash. 
+## Stash
 * Saves current not commited changes into a buffer.
 `git stash`
 * Loads all stash changes into the current branch and deletes the changes from the buffer.
