@@ -1,0 +1,16 @@
+{
+    "name": "oop-learning/oop-learning",
+	"description": "OOP tutorials.",
+    "type": "demo",
+    "authors": [
+        {
+            "name": "Luchezar Proynov",
+            "email": "luchezarproynov@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
