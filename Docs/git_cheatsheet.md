@@ -21,6 +21,15 @@
 4. We delete the old branch_name from GitHub.
 `git push origin --delete <old_name>`
 
+## Delete a branch
+	* delete branch locally
+	`git branch -d localBranchName`
+
+	* delete branch remotely
+	`git push origin --delete remoteBranchName`
+	
+	* The -d option will delete the branch only if it has already been pushed and merged with the remote branch. Use -D instead if you want to force the branch to be deleted, even if it hasn't been pushed or merged yet.
+
 ## Staging files
 * All files
 `git add --all`
