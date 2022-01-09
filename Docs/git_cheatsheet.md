@@ -11,6 +11,16 @@
 ## Creating local branch
 	git checkout -b <new_branch_name>
 
+## Changing branch_name
+1. We go to current branch.
+`git checkout <old_name>`
+2. We change the name of the branch.
+`git branch -m <new_name>`
+3. We upload the new branch_name to GitHub.
+`git push origin -u <new_name>`
+4. We delete the old branch_name from GitHub.
+`git push origin --delete <old_name>`
+
 ## Staging files
 * All files
 `git add --all`
