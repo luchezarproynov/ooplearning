@@ -1,0 +1,53 @@
+What is array?!
+$apples = [];
+Add values
+$apples = array();
+$cart[] = 13;  or
+array_push($cart, 13);
+add values to assoc array
+$car['model'] = 'Ford KA';
+Delete values
+array_​pop()
+unset($apples[$keyX][$keyY]);
+array_values()
+array_diff()
+array_intersect()
+array_merge() vs += for homework
+array_unique();
+sort(&$array)
+ksort(&$array)
+
+
+function sum(int &$total, int $increment): void
+{
+    $total += $increment;
+}
+
+$total = 5;
+sum($total, 5);
+
+echo $total;
+
+
+
+
+
+
+function sum(int $total, int $increment): int
+{
+    $total += $increment;
+    
+    return $total;
+}
+
+$total = 5;
+$newTotal = sum($total, 5);
+
+echo $total;
+
+
+
+$pears = [3, 2, 43,];
+sort($pears, NUMBER);
+
+print_r($pears);
