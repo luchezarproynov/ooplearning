@@ -1,11 +1,9 @@
 <?php
 
 for ($num = 1; $num < 27; $num++) {
-    if ($num % 2 === 1) {
+    if ($num % 2 === 0) {
         echo '$num: '.$num.PHP_EOL;
-    } elseif ($num % 2 === 0) {
-        echo '$num: '.$num.PHP_EOL;
-    }
+    } 
 }
 echo PHP_EOL;
 echo PHP_EOL;
