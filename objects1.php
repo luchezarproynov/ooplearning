@@ -10,6 +10,8 @@ interface ColorInterface
 
 abstract class Fruit implements ColorInterface
 {
+    public $weight;
+    
     abstract public function getTaste(): string;
 }
 
