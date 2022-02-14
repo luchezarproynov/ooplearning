@@ -1,6 +1,6 @@
 <?php
 
-namespace OOP\Basket\Basket2;
+namespace OOP\Basket;
 
 class Apple
 {

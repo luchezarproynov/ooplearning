@@ -30,5 +30,8 @@ $gasTank->addDebit($debit2);
 $gasTank->addDebit($debit3);
 $gasTank->addDebit($debit4);
 print_r($gasTank);
-$gasTank->removeDebit($debit3);
+//$gasTank->removeDebit($debit3);
+//print_r($gasTank);
+
+$gasTank->recalculateLastDebit(75, 7.5);
 print_r($gasTank);

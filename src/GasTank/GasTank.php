@@ -3,9 +3,13 @@
 namespace OOP\GasTank;
 
 use OOP\GasTank\GasDebit;
+use OOP\GasTank\DebitCalculator;
+
 
 class GasTank
 {
+    use DebitCalculator;
+    
     /**
      * Gas tank total volume.
      * @var float
@@ -69,5 +73,20 @@ class GasTank
         if ($debit->volume < 0) {
             throw new \Exception('Can\'t add negative number of debit.');
         }
+    }
+    
+    public function recalculateLastDebit(float $distance, float $usedFuelPer100Km): void
+    {
+        if (!is_array($this->debits) || empty($this->debits)) {
+            return;
+        }
+        
+        $usedGas = $this->calculateUsedGas($distance, $usedFuelPer100Km);
+        $currentDebit = end($this->debits)->volume;
+        if ($usedGas > $currentDebit) {
+            throw new \Exception('Too much gas used.');
+        }
+        
+        end($this->debits)->volume = $currentDebit - $usedGas;
     }
 }
