@@ -2,16 +2,17 @@
 
 namespace OOP\DoubleLinkedList;
 
-use OOP\DoubleLinkedList\LinkedListInterface;
+use OOP\DoubleLinkedList\DoubleLinkedListInterface;
 
 /**
  * Description of Node
  *
  * @author HR
  */
-class Node implements LinkedListInterface
+class Node implements DoubleLinkedListInterface
 {
-    private ?LinkedListInterface $nextNode;
+    private ?DoubleLinkedListInterface $prevNode;
+    private ?DoubleLinkedListInterface $nextNode;
     private string $nodeValue;
 
     public function __construct(string $nodeValue)
@@ -19,12 +20,12 @@ class Node implements LinkedListInterface
         $this->nodeValue = $nodeValue;
     }
     
-    public function getNextNode(): ?LinkedListInterface
+    public function getNextNode(): ?DoubleLinkedListInterface
     {
         return $this->nextNode;
     }
     
-    public function setNextNode(?LinkedListInterface $nextNode): void
+    public function setNextNode(?DoubleLinkedListInterface $nextNode): void
     {
         $this->nextNode = $nextNode;
     }
@@ -37,5 +38,20 @@ class Node implements LinkedListInterface
     public function setNodeValue(string $nodeValue): void
     {
         $this->nodeValue = $nodeValue;
+    }
+    
+    public function getPrevNode(): ?DoubleLinkedListInterface
+    {
+        return $this->prevNode;
+    }
+    
+    public function setPrevNode(?DoubleLinkedListInterface $prevNode): void
+    {
+        $this->prevNode = $prevNode;
+    }
+    
+    public function getNumber(): int
+    {
+        return 6.99;
     }
 }
