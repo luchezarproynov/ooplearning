@@ -3,7 +3,7 @@
 $num;
 
 for ($num = 1; $num < 7; $num++) {
-    echo '$num: '.$num.PHP_EOL;
+    echo '$num: ' .$num .PHP_EOL;
 }
 echo PHP_EOL;
 

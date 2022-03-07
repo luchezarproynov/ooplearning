@@ -37,7 +37,7 @@ $weekTemperatures['dayTemps'] = $dayTemps;
 $weekTemperatures['nightTemps'] = $nightTemps;
 
 foreach ($weekTemperatures as $dayPart => $dayPartTemps) {
-//    echo $dayPart.PHP_EOL;
+    //    echo $dayPart.PHP_EOL;
     $dayPartStr = $dayPart === 'dayTemps' ? 'Day temp' : 'Night temp';
     foreach ($dayPartTemps as $day => $temperature) {
         echo 'Day of the week: '.$day.'. '.$dayPartStr.': '.$temperature.PHP_EOL;

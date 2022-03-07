@@ -20,9 +20,8 @@ $weekTemperatures['dayTemps'] = $dayTemps;
 $weekTemperatures['nightTemps'] = $nightTemps;
 
 foreach ($weekTemperatures['dayTemps'] as $day => $temperature) {
-
-            echo $day.'. '.'Day temp'.': '.$temperature.PHP_EOL;
-            echo $day.'. '.'Night temp'.': '.$weekTemperatures['nightTemps'][$day].PHP_EOL;
+    echo $day.'. '.'Day temp'.': '.$temperature.PHP_EOL;
+    echo $day.'. '.'Night temp'.': '.$weekTemperatures['nightTemps'][$day].PHP_EOL;
 
     echo PHP_EOL;
 }

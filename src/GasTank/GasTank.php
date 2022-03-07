@@ -14,7 +14,7 @@ class GasTank
      *
      * @var float
      */
-    private float $volume;         
+    private float $volume;
 
     /**
      *
@@ -75,8 +75,10 @@ class GasTank
         }
     }
 
-    public function recalculateLastDebit(float $distance, float $usedFuelPer100Km): void
-    {
+    public function recalculateLastDebit(
+        float $distance,
+        float $usedFuelPer100Km
+    ): void {
         if (!is_array($this->debits) || empty($this->debits)) {
             return;
         }

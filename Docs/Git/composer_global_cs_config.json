@@ -1,0 +1,10 @@
+{
+    "require": {
+        "phpmd/phpmd": "@stable",
+        "friendsofphp/php-cs-fixer": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "phpstan/phpstan": "^1.4"
+    }
+}
