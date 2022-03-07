@@ -14,7 +14,7 @@ class GasTank
      *
      * @var float
      */
-    private float $volume;     
+    private float $volume;         
 
     /**
      *

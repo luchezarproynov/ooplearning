@@ -10,9 +10,10 @@ namespace OOP\GasTank;
 class GasDebit
 {
     public \DateTime $dateTime;
-    
+
     /**
      * Gas volume in litres.
+     *
      * @var float
      */
     public float $volume;

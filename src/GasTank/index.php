@@ -6,7 +6,6 @@ require_once '../../vendor/autoload.php';
 use OOP\GasTank\GasDebit;
 use OOP\GasTank\VolvoGasTank;
 
-
 $gasTank = new VolvoGasTank(50);
 $debit1 = new GasDebit();
 $debit2 = new GasDebit();

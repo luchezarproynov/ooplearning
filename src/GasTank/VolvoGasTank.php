@@ -16,6 +16,5 @@ class VolvoGasTank extends GasTank
     {
         parent::removeDebit($debit);
         echo 'child method';
-        
     }
 }
