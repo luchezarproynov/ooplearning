@@ -13,10 +13,12 @@ class Node implements LinkedListInterface
 {
     private ?LinkedListInterface $nextNode;
     private string $nodeValue;
+    private ?Node $prevNode;
 
-    public function __construct(string $nodeValue)
+    public function __construct(string $nodeValue, Node $prevNode = null)
     {
         $this->nodeValue = $nodeValue;
+        $this->prevNode = $prevNode;
     }
     
     public function getNextNode(): ?LinkedListInterface
@@ -38,4 +40,15 @@ class Node implements LinkedListInterface
     {
         $this->nodeValue = $nodeValue;
     }
+
+    public function getPrevNode(): ?LinkedListInterface
+    {
+        return $this->prevNode;
+    }
+
+    public function setPrevNode(?LinkedListInterface $prevNode): void
+    {
+        $this->prevNode = $prevNode;
+    }
+    
 }

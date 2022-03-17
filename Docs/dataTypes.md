@@ -17,3 +17,5 @@ Simple data types:
     5. Object types:
     - instances of any class or interface
     - DateTime class defines any date-time operations. It doesn't use timestamp.
+    
+    6. Data Structures.
