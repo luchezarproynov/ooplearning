@@ -20,22 +20,22 @@ class Node implements LinkedListInterface
         $this->nodeValue = $nodeValue;
         $this->prevNode = $prevNode;
     }
-    
+
     public function getNextNode(): ?LinkedListInterface
     {
         return $this->nextNode;
     }
-    
+
     public function setNextNode(?LinkedListInterface $nextNode): void
     {
         $this->nextNode = $nextNode;
     }
-    
+
     public function getNodeValue(): string
     {
         return $this->nodeValue;
     }
-    
+
     public function setNodeValue(string $nodeValue): void
     {
         $this->nodeValue = $nodeValue;
@@ -50,5 +50,4 @@ class Node implements LinkedListInterface
     {
         $this->prevNode = $prevNode;
     }
-    
 }

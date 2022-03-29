@@ -28,8 +28,8 @@ class DynamicList
             // We have non-empty list
             $newNode = new Node($nodeValue, $this->tail);
             $this->tail = $newNode;
-      }
-      $this->count++;
+        }
+        $this->count++;
     }
 
     public function delete(int $index): void
@@ -37,7 +37,7 @@ class DynamicList
         if ($index >= $this->count || $index < 0) {
             throw new InvalidArgumentException("Invalid index: " . $index);
         }
-        
+
         $currItem = $this->head;
         for ($currIndex = 0; $currIndex <= $index; $currIndex++) {
 //            echo $currItem->getNodeValue().PHP_EOL;
@@ -72,7 +72,7 @@ class DynamicList
         if (0 < $this->count) {
             throw new InvalidArgumentException("Empty dynamic linked list.");
         }
-        
+
         if (1 === $this->count && $this->head->getNodeValue() === $value) {
             $this->head = null;
             $this->tail = null;
@@ -104,4 +104,51 @@ class DynamicList
         $this->count--;
     }
 
+    /**
+     *
+     * @param int $index
+     * @return string - this is found node value
+     */
+    public function read(int $index): string
+    {
+        if ($index >= $this->count || $index < 0) {
+            throw new InvalidArgumentException("Invalid index: " . $index);
+        }
+
+        $currItem = $this->head;
+        for ($currIndex = 0; $currIndex < $index; $currIndex++) {
+            if ($currIndex < $index) {
+                $currItem = $currItem->getNextNode();
+                continue;
+            }
+        }
+
+        return $currItem->getNodeValue();
+    }
+
+    /**
+     *
+     * @param string $nodeValue
+     * @return int - this is found node index
+     */
+    public function readByValue(string $nodeValue): int
+    {
+
+        if (0 < $this->count) {
+            throw new InvalidArgumentException("Empty dynamic linked list.");
+        }
+
+        $index = 0;
+        $currItem = $this->head;
+        while ($currItem->getNodeValue() !== $value) {
+            $currItem = $currItem->getNextNode();
+            $index++;
+        }
+
+        if ($currItem->getNodeValue() !== $value) {
+            throw new \Exception("No node with value: " . $value);
+        }
+
+        return $index;
+    }
 }

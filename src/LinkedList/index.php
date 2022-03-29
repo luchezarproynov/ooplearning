@@ -17,7 +17,6 @@ $next3->setNextNode($last);
 
 $currItem = $head;
 while ($currItem !== null) {
-    echo $currItem->getNodeValue().PHP_EOL;
+    echo $currItem->getNodeValue() . PHP_EOL;
     $currItem = $currItem->getNextNode();
-    
 }
