@@ -1,5 +1,7 @@
 <?php
 
+namespace OOP\LinkedList;
+
 use OOP\LinkedList\Node;
 
 /**
@@ -35,7 +37,7 @@ class DynamicList
     public function delete(int $index): void
     {
         if ($index >= $this->count || $index < 0) {
-            throw new InvalidArgumentException("Invalid index: " . $index);
+            throw new \InvalidArgumentException("Invalid index: " . $index);
         }
 
         $currItem = $this->head;
@@ -70,7 +72,7 @@ class DynamicList
     public function deleteByValue(string $value): void
     {
         if (0 < $this->count) {
-            throw new InvalidArgumentException("Empty dynamic linked list.");
+            throw new \InvalidArgumentException("Empty dynamic linked list.");
         }
 
         if (1 === $this->count && $this->head->getNodeValue() === $value) {
@@ -112,7 +114,7 @@ class DynamicList
     public function read(int $index): string
     {
         if ($index >= $this->count || $index < 0) {
-            throw new InvalidArgumentException("Invalid index: " . $index);
+            throw new \InvalidArgumentException("Invalid index: " . $index);
         }
 
         $currItem = $this->head;
@@ -135,18 +137,18 @@ class DynamicList
     {
 
         if (0 < $this->count) {
-            throw new InvalidArgumentException("Empty dynamic linked list.");
+            throw new \InvalidArgumentException("Empty dynamic linked list.");
         }
 
         $index = 0;
         $currItem = $this->head;
-        while ($currItem->getNodeValue() !== $value) {
+        while ($currItem->getNodeValue() !== $nodeValue) {
             $currItem = $currItem->getNextNode();
             $index++;
         }
 
-        if ($currItem->getNodeValue() !== $value) {
-            throw new \Exception("No node with value: " . $value);
+        if ($currItem->getNodeValue() !== $nodeValue) {
+            throw new \Exception("No node with value: " . $nodeValue);
         }
 
         return $index;
